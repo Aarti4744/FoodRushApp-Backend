@@ -1,0 +1,23 @@
+{
+  "name": "flexmitra",
+  "version": "1.0.0",
+  "description": "this is my fitness application",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
