@@ -15,8 +15,10 @@ exports.verifyOtp = async (email, otp) => {
     WHERE email = ? AND otp = ? AND is_used = FALSE AND expires_at > NOW()
     ORDER BY id DESC LIMIT 1
   `;
-  return db.query(sql, [email, otp]);
+  const [rows] = await db.query(sql, [email, otp]);
+  return rows;
 };
+
 
 // Mark OTP as used
 exports.markOtpUsed = async (id) => {
